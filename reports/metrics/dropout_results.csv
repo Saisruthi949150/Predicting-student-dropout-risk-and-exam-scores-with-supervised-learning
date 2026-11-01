@@ -1,0 +1,6 @@
+,accuracy,precision,recall,f1,roc_auc,train_rows
+Logistic Regression,0.9905,0.7871,0.6877,0.734,0.9966,63070
+SVM (RBF Kernel),0.9898,0.7672,0.6678,0.714,0.9949,10000
+Random Forest,1.0,1.0,1.0,1.0,1.0,63070
+XGBoost,1.0,1.0,1.0,1.0,1.0,63070
+Hybrid RF-XGBoost (Soft Voting),1.0,1.0,1.0,1.0,1.0,63070

@@ -1,0 +1,76 @@
+{
+  "dropout": {
+    "best": "Hybrid RF-XGBoost (Soft Voting)",
+    "results": {
+      "Logistic Regression": {
+        "accuracy": 0.9905,
+        "precision": 0.7871,
+        "recall": 0.6877,
+        "f1": 0.734,
+        "roc_auc": 0.9966,
+        "train_rows": 63070
+      },
+      "SVM (RBF Kernel)": {
+        "accuracy": 0.9898,
+        "precision": 0.7672,
+        "recall": 0.6678,
+        "f1": 0.714,
+        "roc_auc": 0.9949,
+        "train_rows": 10000
+      },
+      "Random Forest": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "roc_auc": 1.0,
+        "train_rows": 63070
+      },
+      "XGBoost": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "roc_auc": 1.0,
+        "train_rows": 63070
+      },
+      "Hybrid RF-XGBoost (Soft Voting)": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "roc_auc": 1.0,
+        "train_rows": 63070
+      }
+    }
+  },
+  "exam_score": {
+    "best": "Hybrid RF-XGBoost (Stacking)",
+    "results": {
+      "Random Forest": {
+        "r2": 0.8618,
+        "rmse": 4.179,
+        "mae": 3.2792,
+        "train_rows": 63070
+      },
+      "XGBoost": {
+        "r2": 0.8659,
+        "rmse": 4.1175,
+        "mae": 3.2057,
+        "train_rows": 63070
+      },
+      "SVR (RBF Kernel)": {
+        "r2": 0.8476,
+        "rmse": 4.3888,
+        "mae": 3.2767,
+        "train_rows": 10000
+      },
+      "Hybrid RF-XGBoost (Stacking)": {
+        "r2": 0.8654,
+        "rmse": 4.1252,
+        "mae": 3.2175,
+        "train_rows": 63070
+      }
+    }
+  }
+}
