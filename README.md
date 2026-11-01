@@ -184,8 +184,3 @@ streamlit run app.py
 Every prediction produces a PDF report (reportlab) containing the student details, the
 dropout probability and risk level, the predicted exam score, and suggested actions.
 
-## Project documents
-
-The five capstone documents (Introduction Reviews 1–2, Final Reviews 1–2 and the CP report)
-define this implementation: problem statement, objectives, requirement analysis,
-UML/design diagrams, the two algorithm pseudocode blocks, testing strategy and results.
