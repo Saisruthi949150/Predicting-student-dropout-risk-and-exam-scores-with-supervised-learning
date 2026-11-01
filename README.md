@@ -1,8 +1,5 @@
 # Academic Performance Prediction Using Supervised Learning
 
-Capstone project — **Batch AIML 13**, Department of Artificial Intelligence & Data Science,
-GITAM School of CSE, Bengaluru. Guide: Dr. Silpa C.
-
 Two supervised-learning systems are built end to end:
 
 1. **Dropout risk classification** — predicts `dropout_risk` (Yes/No) from academic,
