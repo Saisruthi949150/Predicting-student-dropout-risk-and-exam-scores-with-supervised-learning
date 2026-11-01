@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "1. Install dependencies",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/Scripts/python.exe -m pip install -r requirements.txt",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "2. Run full pipeline (train.py)",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/Scripts/python.exe train.py",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "3. Run web app (streamlit)",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/Scripts/python.exe -m streamlit run app.py",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": [],
+      "group": { "kind": "build", "isDefault": true },
+      "presentation": { "reveal": "always", "panel": "dedicated" },
+      "isBackground": true
+    },
+    {
+      "label": "Run app after training",
+      "dependsOrder": "sequence",
+      "dependsOn": ["2. Run full pipeline (train.py)", "3. Run web app (streamlit)"],
+      "problemMatcher": []
+    }
+  ]
+}

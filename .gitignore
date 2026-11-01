@@ -11,15 +11,12 @@ venv/
 .DS_Store
 Thumbs.db
 .idea/
-.vscode/
 
 # Scratch downloads
 .cp_src/
 
-# Trained model artifacts
-# best_exam_model.pkl is ~551 MB, above GitHub's 100 MB per-file limit.
-# Regenerate both bundles with: python train.py
-models/*.pkl
+# Local model backups
+.model_backup/
 
 # Runtime logs
 reports/streamlit_run.log

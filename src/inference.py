@@ -14,7 +14,10 @@ def save_bundle(path, pipeline, numeric, categorical, metrics, model_name):
         "metrics": metrics,
         "model_name": model_name,
     }
-    joblib.dump(bundle, path)
+    # Compressed so the bundles stay inside GitHub's 100 MB per-file limit:
+    # the exam-score bundle is ~578 MB raw and ~89 MB compressed. joblib.load
+    # transparently decompresses, so callers are unaffected.
+    joblib.dump(bundle, path, compress=9)
     return bundle
 
 

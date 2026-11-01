@@ -37,8 +37,8 @@ src/
 data/raw/student_habits.csv               # the Kaggle dataset (80,000 × 31)
 data/processed/cleaned.csv                # written by notebook 01
 
-models/best_dropout_model.pkl             # saved pipeline (preprocessing + model) — generated, not committed
-models/best_exam_model.pkl                # same; ~551 MB, so it exceeds GitHub's file limit
+models/best_dropout_model.pkl             # saved pipeline (preprocessing + model), compressed (~2.8 MB)
+models/best_exam_model.pkl                # same, compressed (~89 MB)
 
 reports/figures/                          # EDA and evaluation plots
 reports/metrics/                          # metrics.json + per-model CSV tables
@@ -78,9 +78,10 @@ requirements.txt
    streamlit run app.py
    ```
 
-> **Model artifacts are generated, not committed.** `models/*.pkl` is gitignored because
-> `best_exam_model.pkl` is ~551 MB and exceeds GitHub's 100 MB per-file limit. Run
-> `python train.py` once (a few minutes) to rebuild both bundles before launching the app.
+> **Model artifacts are committed, compressed.** `joblib` bundles are written with
+> `compress=9` so they fit GitHub's 100 MB per-file limit (the exam-score bundle is
+> ~578 MB raw, ~89 MB compressed); `joblib.load` decompresses transparently, so the app
+> and notebooks need no special handling. Rebuild them anytime with `python train.py`.
 
 ## Dataset
 
